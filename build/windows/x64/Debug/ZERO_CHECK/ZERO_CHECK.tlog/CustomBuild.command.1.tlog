@@ -1,0 +1,10 @@
+^C:\USERS\ACER\DESKTOP\PUSH_NOTIFICATION\BUILD\WINDOWS\CMAKEFILES\DD660D1104A944863CAD6A2C6DC56463\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Acer/Desktop/push_notification/windows -BC:/Users/Acer/Desktop/push_notification/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Acer/Desktop/push_notification/build/windows/flutter_push_notification.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

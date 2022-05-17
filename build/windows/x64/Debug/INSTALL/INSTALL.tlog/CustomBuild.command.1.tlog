@@ -1,0 +1,10 @@
+^C:\USERS\ACER\DESKTOP\PUSH_NOTIFICATION\BUILD\WINDOWS\CMAKEFILES\DD660D1104A944863CAD6A2C6DC56463\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
+  //final FirebaseFirestore _db = FirebaseFirestore.instance;
   final FirebaseMessaging _fcm = FirebaseMessaging.instance;
 
   @override
@@ -29,9 +29,10 @@ class _HomePageState extends State<HomePage> {
         }
       },
     );
-    _fcm.subscribeToTopic("student");
+   // _fcm.subscribeToTopic("student");
+    //_fcm.subscribeToTopic("teacher");
 
-    FirebaseMessaging.onMessage.listen(
+    FirebaseMessaging.onMessage.listen( 
       (message) {
         print("FirebaseMessaging.onMessage.listen");
         if (message.notification != null) {
